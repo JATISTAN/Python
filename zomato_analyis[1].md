@@ -1,6 +1,18 @@
-# ZOMATO DATA ANALSIS
 
-## 1 - import all the libraries
+# Python Projects 
+
+
+
+ 
+
+
+---
+
+## **Project: Zomato Data Analysis **  
+
+---
+
+## 1 - importing  all the libraries
 
 
 ```python
@@ -20,6 +32,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 ```
+
+---
 
 ## 2 - create a data frame 
 
@@ -209,9 +223,9 @@ dataframe
 <p>148 rows × 7 columns</p>
 </div>
 
+---
 
-
-## convert the data type of column - rate
+## 3 - convert the data type of column - rate
 
 
 ```python
@@ -239,7 +253,9 @@ print(dataframe.head())
     4                          600          Buffet  
     
 
-## for checking any missing or null value
+---
+
+## 4 - for checking any missing or null value
 
 
 ```python
@@ -260,9 +276,12 @@ dataframe.info()
      6   listed_in(type)              148 non-null    object 
     dtypes: float64(1), int64(2), object(4)
     memory usage: 8.2+ KB
-    
 
-## what type of resturant majority customer order food from ?
+
+---
+
+## **QUESTION 1**:
+## Which type of restaurant do the majority of customers prefer to order food from? 
 
 
 ```python
@@ -356,7 +375,7 @@ dataframe.head()
 
 
 
-## using count plot for exact counting of data
+## Using a count plot to exact accurate counting of data.
 
 
 ```python
@@ -387,7 +406,7 @@ plt.xticks(rotation=90)
 
 
     
-![png](output_14_2.png)
+![png](images11/output_14_2.png)
     
 
 
@@ -396,7 +415,15 @@ plt.xticks(rotation=90)
 # bargraph
 ```
 
-## CONCULASION -  majority customer order food from DINING type
+## **Conclusion:**  
+- The majority of customers tend to order food from **Dining** type restaurants, followed by **Cafes**. **Buffet** restaurants come in third, while other types of restaurants account for a smaller share of customer preferences.
+-  This suggests a strong preference for dining-in experiences, with cafes also being a popular choice for many customers.
+
+---
+
+
+## **Question 2**:
+## How many votes does each restaurant type receive from its customers?
 
 
 ```python
@@ -490,7 +517,6 @@ dataframe.head()
 
 
 
-# number of votes each restaurant type receives from its customers
 
 
 ```python
@@ -504,7 +530,7 @@ plt.show()
 
 
     
-![png](output_19_0.png)
+![png](images11/output_19_0.png)
     
 
 
@@ -513,9 +539,15 @@ plt.show()
 # line graph 
 ```
 
-## CONCLUSION - dining type restaurant gets the maximum number of votes from customers
+## **Conclusion:**  
+Dining-type restaurants receive the highest number of votes from customers, indicating a strong preference for this restaurant category.
 
-## what are the maximum rating restaurants receives 
+
+---
+
+
+## **Question 3**:
+## What is the highest rating received by restaurants across different categories?
 
 
 ```python
@@ -619,7 +651,7 @@ plt.show()
 
 
     
-![png](output_24_0.png)
+![png](images11/output_24_0.png)
     
 
 
@@ -628,9 +660,15 @@ plt.show()
 # HISTOGRAM
 ```
 
-## CONCLUSION - MAXIMUM RATING LIES BETWEEN 3.25 TO 4 
+## **Conclusion**:
+## The highest ratings for restaurants typically fall within the range of 3.25 to 4.
 
-## AVERAGE ORDER SPENDING BY COUPLES
+
+---
+
+
+## **Question 4:** 
+## What is the average spending per order by couples at restaurants?
 
 
 ```python
@@ -751,7 +789,7 @@ sns.countplot(x=couple_data,palette="viridis")
 
 
     
-![png](output_30_2.png)
+![png](images11/output_30_2.png)
     
 
 
@@ -760,9 +798,15 @@ sns.countplot(x=couple_data,palette="viridis")
 # BARGRAPH
 ```
 
-## CONCLUSION - AVERAGE SPENDING BY COUPLE IN A RESTARAUNT IS 300  
+## **Conclusion**:
+## The average spending per order by couples at a restaurant is ₹300. 
 
-## WHICH MODE RECEIVES MAXIMUM RATING ONLINE OR OFFLINE
+
+---
+
+
+## **Question 5**:
+## Which mode (online or offline) receives higher ratings in terms of user satisfaction?
 
 
 ```python
@@ -878,7 +922,7 @@ sns.boxplot(x = "online_order",y ="rate",data = dataframe,palette ="Set2")
 
 
     
-![png](output_35_2.png)
+![png](images11/output_35_2.png)
     
 
 
@@ -895,14 +939,15 @@ sns.boxplot(x = "online_order",y ="rate",data = dataframe,palette ="Set2")
     
 
 
-## CONCLUSION - ONLINE ORDER RECEIVE MOST OF RATING IN COMPARISION TO OFFLINE ORDERS
+## **Conclusion**:
+## In conclusion, online orders receive higher ratings than offline orders. This trend reflects greater customer satisfaction with online ordering.
 
 
-```python
+---
 
-```
 
-## which type of restaurant receives more offline order ? so that zomato can give them offers
+## **Question 6**:
+## What type of restaurant generates the highest number of offline orders, making them eligible for Zomato's promotional offers?
 
 
 ```python
@@ -1008,7 +1053,7 @@ plt.show()
 
 
     
-![png](output_41_0.png)
+![png](images11/output_41_0.png)
     
 
 
@@ -1017,13 +1062,32 @@ plt.show()
 #HEATMAP
 ```
 
-## CONCLUSION - DINING RESTAURANT ACCEPTS MORE OFFLINE ORDERS WHEREAS CAFES RECEIVES MORE ONLINE ORDERS . THAT SUGGESTS CUSTOMERS PREFERS IN PERSON ORDERS AT RESTAURANT AND MORE ONLINE ORDERS AT CAFE 
+## **Conclusion**:
+## Dining restaurants receive more offline orders, while cafes receive more online orders. This suggests that customers prefer in-person dining at restaurants and opt for online ordering at cafes.
 
+---
 
 ```python
 
 ```
+---
+## Conclusion:
 
+This **Zomato Data Analysis** project provides insightful findings based on the analysis of restaurant data across various categories. The following key conclusions can be drawn from the analysis:
+
+1. **Most Preferred Restaurant Type**:
+- The majority of customers tend to prefer **Dining** type restaurants, followed by **Cafes**. **Buffet** restaurants come in third, while other types have a relatively smaller share in customer preferences.
+- This suggests that dining-in experiences are more popular, with cafes also being a popular choice.
+
+3. **Votes by Restaurant Type**:
+- **Dining** type restaurants receive the highest number of votes, reinforcing the fact that this category has the most customer engagement.
+- This further emphasizes the popularity of dining options for customers.
+
+5. **Highest Ratings by Restaurant Category**:
+- The highest ratings across various restaurant types were analyzed, offering a glimpse into customer satisfaction levels and the overall quality of services provided by restaurants. 
+
+Through this analysis, we gain a better understanding of customer behavior, which can be used for further research or business decisions in the restaurant industry. The project effectively demonstrates the use of Python libraries like Pandas, NumPy, and Seaborn for data manipulation and visualization, and serves as an excellent showcase of data analysis skills.
+---
 
 ```python
 
